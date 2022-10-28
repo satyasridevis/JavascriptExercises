@@ -5,6 +5,8 @@ function generateHashtag(str) {
 
   let string = newarr.map((i) => i.charAt(0).toUpperCase() + i.slice(1));
 
+  console.log(string);
+
   result = result + string.toString().replace(/,/g, "");
 
   if (result.length > 140) {
