@@ -2,14 +2,20 @@ const persistence = (n) => {
   count = 0;
   let times = 1,
     array;
-  let numberLength = n.toString().length;
+
   array = String(n)
     .split("")
     .map((num) => Number(num));
   console.log(array);
+  let arrayLength = array.length;
 
-  // numberLength > 1 ? array.map((i) => (times *= i)) : "0";
-  console.log(times);
+  array.map((i) => (times *= i));
+
+  let result = arrayLength === 1 ? "0" : times;
+  console.log(result);
+
+  let numLen = times.toString().length;
+  let finalResult = numLen > 1 ? persistence(times) : times;
 
   // if (numberLength === 1) {
   //   return 0;
@@ -33,4 +39,4 @@ const persistence = (n) => {
 persistence(48);
 // persistence(39);
 // persistence(25);
-// persistence(999);
+persistence(999);
