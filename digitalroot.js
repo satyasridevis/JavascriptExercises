@@ -1,13 +1,13 @@
 const digitalRoot = (n) => {
   let sum = 0;
-  // number to array
+  //covert number to array
   let array = String(n)
     .split("")
     .map((num) => {
       return Number(num);
     });
 
-  console.log(typeof array, array);
+  console.log(array);
   // sum of digits
   for (let i of array) {
     sum = sum + i;
